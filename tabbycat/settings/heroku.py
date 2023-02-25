@@ -41,7 +41,7 @@ if 'DJANGO_SECRET_KEY' in environ and environ.get('DISABLE_HTTPS_REDIRECTS', '')
 DATABASES = {
     'default': dj_database_url.config(default='postgres://localhost')
     {
-        'NAME': os.environ['POSTGRES_DB'],
+        'NAME': "sdc2023",
     }
 }
 
