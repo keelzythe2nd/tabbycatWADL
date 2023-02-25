@@ -4,13 +4,13 @@ from django.urls import reverse
 from django.utils import formats, timezone, translation
 from django.shortcuts import redirect
 
-from ipware.ip import get_real_ip
+from ipware.ip import get_client_ip
 
 logger = logging.getLogger(__name__)
 
 
 def get_ip_address(request):
-    ip = get_real_ip(request)
+    ip = get_cient_ip(request)
     if ip is None:
         return "0.0.0.0"
     return ip
