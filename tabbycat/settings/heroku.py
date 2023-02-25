@@ -38,10 +38,16 @@ if 'DJANGO_SECRET_KEY' in environ and environ.get('DISABLE_HTTPS_REDIRECTS', '')
 # ==============================================================================
 
 # Parse database configuration from $DATABASE_URL
+#DATABASES = {
+#   'default': dj_database_url.config(default='postgres://localhost')
+#}
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://localhost')
-    {
-        'NAME': "sdc2023",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': 'postgres',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
