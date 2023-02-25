@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 
 def get_ip_address(request):
-    ip = get_cient_ip(request)
+    ip = get_client_ip(request)
     if ip is None:
         return "0.0.0.0"
     return ip
